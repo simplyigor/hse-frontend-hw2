@@ -92,7 +92,7 @@ console.log('testSum_num:', testSum_num, 'testSum_left:', testSum_left, 'testSum
 - `push` - функция, принимающая элемент и сохраняющая новую версию массива с добавленным элементом в конце
 - `pop` - функция, сохраняющая новую версию массива без последнего элемента и возвращающая этот последний элемент
 
-NB: я не совсем понял можно ли было использовать уже реализованные в JS методы или нет, но я все-таки решил упростить себе жизнь и воспользовался таким штуками как:
+**NB:** я не совсем понял можно ли было использовать уже реализованные в JS методы или нет, но я все-таки решил упростить себе жизнь и воспользовался таким штуками как:
 
 - [`Array.prototype.pop()`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
 - [`Array.prototype.push()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
