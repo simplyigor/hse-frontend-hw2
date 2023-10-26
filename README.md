@@ -92,14 +92,14 @@ console.log('testSum_num:', testSum_num, 'testSum_left:', testSum_left, 'testSum
 - `push` - функция, принимающая элемент и сохраняющая новую версию массива с добавленным элементом в конце
 - `pop` - функция, сохраняющая новую версию массива без последнего элемента и возвращающая этот последний элемент
 
+<details>
+<summary>✨Код✨</summary>
+
 **NB:** я не совсем понял можно ли было использовать уже реализованные в JS методы или нет, но я все-таки решил упростить себе жизнь и воспользовался таким штуками как:
 
 - [`Array.prototype.pop()`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
 - [`Array.prototype.push()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
 - [`Array.prototype.slice()`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
-
-<details>
-<summary>✨Код✨</summary>
 
 ```js
 function getMinimalCVS(array) {
@@ -137,7 +137,7 @@ console.log(cvs.head())
 Напишите функцию, которая принимает на вход строку в `snake_case` и превращает её в строку в `camelCase`.
 
 <details>
-<summary>Код</summary> 
+<summary>✨Код✨</summary> 
 
 ```js
 function solutionFn(someString) { // Шаг №1: Определяем функцию solutionFn(), которая принимает string 
