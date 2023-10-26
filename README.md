@@ -12,7 +12,7 @@
 
 <blockquote>
 <details>
-<summary>✨Код✨</summary>
+<summary>Код✨</summary>
   
 ```js
 function solutionFn(object) { // Шаг 1: Определяем функцию solutionFn(), которая получает на вход объект
@@ -58,7 +58,7 @@ console.log(resultObj) // { boolean: 2, number: 2, object: 1, string: 1 }
 
 <blockquote>
 <details>
-<summary>✨Код✨</summary>
+<summary>Код✨</summary>
   
 ```js
 function sum(left_value, right_value) { // Шаг №1: Определяем функцию sum(), которая принимает 2 значения
@@ -98,7 +98,7 @@ console.log('testSum_num:', testSum_num, 'testSum_left:', testSum_left, 'testSum
 
 <blockquote>
 <details>
-<summary>✨Код✨</summary>
+<summary>Код✨</summary>
 
 **NB:** я не совсем понял можно ли было использовать уже реализованные в JS методы или нет, но я все-таки решил упростить себе жизнь и воспользовался таким штуками как:
 
@@ -155,7 +155,7 @@ console.log(cvs.head())
 
 <blockquote>
 <details>
-<summary>✨Код✨</summary> 
+<summary>Код✨</summary> 
 
 ```js
 function hitOrRun(a, b) {
@@ -184,7 +184,7 @@ console.log(hitOrRun(8, 15))
 
 <blockquote>
 <details>
-<summary>✨Код✨</summary> 
+<summary>Код✨</summary> 
 
 ```js
 function solutionFn(someString) { // Шаг №1: Определяем функцию solutionFn(), которая принимает string 
@@ -211,7 +211,7 @@ console.log(testFunct)
 
 <blockquote>
 <details>
-<summary>✨Код✨</summary>
+<summary>Код✨</summary>
 
 ```js
 function isSpam(text, keywords) { // Шаг №1: Определяем функцию isSpam(), которая принимает текст и ключевые слова
