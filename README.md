@@ -99,8 +99,9 @@ console.log('testSum_num:', testSum_num, 'testSum_left:', testSum_left, 'testSum
 <blockquote>
 <details>
 <summary>Код ✨</summary>
-
-**NB:** я не совсем понял можно ли было использовать уже реализованные в JS методы или нет, но я все-таки решил упростить себе жизнь и воспользовался таким штуками как:
+<br />
+  
+**NB:** я не совсем понял можно ли было использовать уже реализованные в JS методы или нет, но я все-таки решил упростить себе жизнь и воспользовался такими штуками как:
 
 - [`Array.prototype.pop()`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
 - [`Array.prototype.push()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
