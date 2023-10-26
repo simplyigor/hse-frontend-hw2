@@ -138,6 +138,46 @@ console.log(cvs.head())
 </details>
 </blockquote>
 
+### Задачка №6 – Hit Or Run 
+
+Напишите функцию `hitOrRun`, которая:
+
+- Принимает на вход два натуральных числа `a` и `b` (`a < b`)
+- Генерирует рандомное число в промежутке `[a, b]`
+- Проверяет, является ли оно простым
+- Если является, то возвращает строку `run`
+- Если не является, то возвращает строку `hit`
+
+Подсмотрел некоторые части кода для решения этой задачи в этих источниках:
+
+- [Про генерацию случайного числа в интервале](https://stackoverflow.com/questions/1527803/generating-random-whole-numbers-in-javascript-in-a-specific-range) 
+- [Про нахождение простых чисел](https://stackoverflow.com/questions/40200089/check-number-prime-in-javascript)
+
+<blockquote>
+<details>
+<summary>✨Код✨</summary> 
+
+```js
+function hitOrRun(a, b) {
+  let randomNumber = Math.floor(Math.random() * (b - a + 1)) + a; // Шаг №1: Выбираем случайное число в интервале [a, b]
+  if (randomNumber < 2) { // Шаг №2: Последовательность простых чисел начинается с 2, поэтому будем возвращать hit в случае, если randomNumber < 2
+    return "hit";
+  }
+  for (let i = 2; i <= Math.sqrt(randomNumber); i++) { // Шаг №3: Для остальных случаев проводим проверку
+    if (randomNumber % i === 0) {
+      return "run" + '\n' + randomNumber; // Шаг №3.1: Если да, то вернем run (для прозрачности я также решил выводить randomNumber)  
+    }
+  }
+  return "hit" + '\n' + randomNumber; // Шаг №3.2: Если нет, то вернем hit
+}
+
+// Для тестирования:
+console.log(hitOrRun(1, 25))
+```
+  
+</details>
+</blockquote>
+
 ### Задачка №7 – Case Converter
 
 Напишите функцию, которая принимает на вход строку в `snake_case` и превращает её в строку в `camelCase`.
