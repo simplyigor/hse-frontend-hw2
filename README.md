@@ -101,7 +101,7 @@ console.log('testSum_num:', testSum_num, 'testSum_left:', testSum_left, 'testSum
 <summary>Код ✨</summary>
 <br />
   
-**NB:** я не совсем понял можно ли было использовать уже реализованные в JS методы или нет, но я все-таки решил упростить себе жизнь и воспользовался такими штуками как:
+**NB:** не совсем понял можно ли было использовать уже реализованные в JS методы или нет, но я все-таки решил упростить себе жизнь и воспользовался такими штуками как:
 
 - [`Array.prototype.pop()`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
 - [`Array.prototype.push()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
