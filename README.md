@@ -17,7 +17,7 @@
 function solutionFn(object) { // Шаг 1: Определяем функцию solutionFn(), которая получает на вход объект
   const resultObj = {}; // Шаг 2: Создаем пустой объект resultObj
   for (let key in object) { // Шаг 3: Запускаем цикл for с проверкой условия
-    const type = typeof object[key]; // Шаг 4: Говорим функции, что type это тип ключа в входном объекте. Используем оператор typeof, как и указано в задании :)
+    const type = typeof object[key]; // Шаг 4: Говорим функции, что type это тип ключа в входном объекте. Используем оператор typeof, как и посоветовали в задании :)
     if (resultObj[type]) { // Шаг 5: Проверяем есть ли уже такой тип ключа в объекте resultObj
       resultObj[type]++; // Шаг 5.1: Если да, то увеличим соответствующее значение на 1 
     } else {
@@ -59,7 +59,7 @@ console.log(resultObj) // { boolean: 2, number: 2, object: 1, string: 1 }
   
 ```js
 function sum(left_value, right_value) { // Шаг №1: Определяем функцию sum(), которая принимает 2 значения
-    if ((typeof left_value !== 'number') && (typeof right_value !== 'number')) { //Шаг №2: Если оба операнда не являются числами...
+    if ((typeof left_value !== 'number') && (typeof right_value !== 'number')) { // Шаг №2: Если оба операнда не являются числами...
       return 'Operands are not numbers'; // ... то выкидывается ошибка "Operands are not numbers"
     }
     else if (typeof left_value !== 'number') { // Шаг №2.1: Если левый операнд не является числом...
@@ -141,7 +141,7 @@ console.log(cvs.head())
 
 ```js
 function isSpam(text, keywords) { // Шаг №1: Определяем функцию isSpam(), которая принимает текст и ключевые слова
-  for (let len = 0; len < keywords.length; len++) { // Шаг №2: Запускаем цикл, переберающий все элементы в массиве keywards 
+  for (let len = 0; len < keywords.length; len++) { // Шаг №2: Запускаем цикл, перебирающий все элементы в массиве keywords 
     if (text.toLowerCase().includes(keywords[len].toLowerCase())) { // Шаг №3: Если текст содержит хотя бы одно из ключевых слов...
       return true; // ... выведем логическое значение true
     }
