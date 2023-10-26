@@ -11,7 +11,7 @@
 Реализуйте функцию, которая получает на вход объект, а возвращает объект, в котором в качестве ключей указаны типы, встречающиеся в исходном объекте, а в качестве значений - как часто они встречались.
 
 <details>
-<summary>Код</summary>
+<summary>✨Код✨</summary>
   
 ```js
 function solutionFn(object) { // Шаг 1: Определяем функцию solutionFn(), которая получает на вход объект
@@ -55,7 +55,7 @@ console.log(resultObj) // { boolean: 2, number: 2, object: 1, string: 1 }
 - Если оба операнда не являются числами, то выкидывается ошибка "Operands are not numbers"
 
 <details>
-<summary>Код</summary>
+<summary>✨Код✨</summary>
   
 ```js
 function sum(left_value, right_value) { // Шаг №1: Определяем функцию sum(), которая принимает 2 значения
@@ -83,12 +83,61 @@ console.log('testSum_num:', testSum_num, 'testSum_left:', testSum_left, 'testSum
 ```
 </details>
 
+### Задача №4 – CVS на минималках
+
+Напишите функцию getMinimalCVS, которая будет выполнять роль CVS для некоторого массива. Она должна принимать на вход массив и возвращать объект с четырьмя свойствами:
+
+- `head` - функция, возвращающая последнюю версию массива
+- `history` - функция, возвращаюся массив со всеми версиями массива
+- `push` - функция, принимающая элемент и сохраняющая новую версию массива с добавленным элементом в конце
+- `pop` - функция, сохраняющая новую версию массива без последнего элемента и возвращающая этот последний элемент
+
+NB: я не совсем понял можно ли было использовать уже реализованные в JS методы или нет, но я все-таки решил упростить себе жизнь и воспользовался таким штуками как:
+
+- [`Array.prototype.pop()`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
+- [`Array.prototype.push()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
+- [`Array.prototype.slice()`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
+
+<details>
+<summary>✨Код✨</summary>
+
+```js
+function getMinimalCVS(array) {
+  const history = [array.slice()] // Создадим упорядоченную коллекцию данных (= история как массив)
+  return {
+    head: () => array.slice(), // Вернем последнюю версию массива с помощью метода Array.prototype.slice()
+    history: () => history.slice(), // Вернем всю историю, используя тот же slice()
+    push: (new_element) => {
+      array.push(new_element); // Добавим новый элемент в конец массива c помощью метода Array.prototype.push()
+      history.push(array.slice()); // Добавим новую версию массива в конец истории
+    }, 
+    pop: () => {
+      const new_element = array.pop(); // Удалим последний элемент c помощью метода Array.prototype.pop()
+      history.push(array.slice()); // Добавим новую версию массива в конец истории
+      return new_element // Выведем значение удаленного элемента
+    }
+  };
+}
+
+// Для тестирования:
+
+const cvs = getMinimalCVS(['a', 'b', 'c']);
+cvs.push('hello');
+cvs.push('world')
+
+console.log(cvs.pop()); 
+console.log(cvs.history());
+console.log(cvs.head())
+```
+
+</details>
+
 ### Задачка №8 - Антиспам
 
 Реализуйте функцию простейшей проверки текста на спам, где `text` – текст, проверяемый на спам, `keywords` - массив ключевых слов, а результат функции – логическое значение.
 
 <details>
-<summary>Код</summary>
+<summary>✨Код✨</summary>
 
 ```js
 function isSpam(text, keywords) { // Шаг №1: Определяем функцию isSpam(), которая принимает текст и ключевые слова
