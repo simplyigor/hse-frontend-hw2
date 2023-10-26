@@ -172,7 +172,7 @@ function hitOrRun(a, b) {
 }
 
 // Для тестирования:
-console.log(hitOrRun(1, 25))
+console.log(hitOrRun(8, 15))
 ```
   
 </details>
