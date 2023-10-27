@@ -191,14 +191,14 @@ console.log(hitOrRun(8, 15))
 function solutionFn(someString) { // Шаг №1: Определяем функцию solutionFn(), которая принимает string 
   let words = someString.split('_'); // Шаг №2: Разделяем полученный string по нижнему подчеркиванию (e.g. hello_world -> hello world)
   for (let i = 1; i < words.length; i++) { // Шаг №3: Запускаем цикл для всех слов, начиная со второго (i = 1, так как в JS нумерация с нуля)
-    words[i] = words[i][0].toUpperCase() + words[i].slice(1); // Шаг №4: Добавляем верхний регистр к первой букве каждого слова, затем прибавляем остальные части слов.
+    words[i] = words[i][0].toUpperCase() + words[i].slice(1).toLowerCase() ; // Шаг №4: Добавляем верхний регистр к первой букве слов, затем прибавляем остальные части слов.
   }
   return words.join(''); // Шаг №4: Объединяем все слова в единую конструкцию 
 }
 
 // Для тестирования:
 
-const someString = "backend_developer_wrote_this_function"
+const someString = "backend_developer_wrote_this_name"
 const testFunct = solutionFn(someString)
 console.log(testFunct)
 ```
