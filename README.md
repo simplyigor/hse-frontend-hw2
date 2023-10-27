@@ -172,10 +172,10 @@ function hitOrRun(a, b) {
   }
   for (let i = 2; i <= Math.sqrt(randomNumber); i++) { // Шаг №3: Для остальных случаев проводим эксплицитную проверку через остаток при делении
     if (randomNumber % i === 0) {
-      return "run" + '\n' + randomNumber; // Шаг №3.1: Если число простое, то вернем run (для прозрачности я также решил выводить randomNumber)  
+      return "hit" + '\n' + randomNumber; // Шаг №3.1: Если число НЕ простое, то вернем hit (для прозрачности я также решил выводить randomNumber)  
     }
   }
-  return "hit" + '\n' + randomNumber; // Шаг №3.2: Если нет, то вернем hit
+  return "run" + '\n' + randomNumber; // Шаг №3.2: Если простое, то вернем run
 }
 
 // Для тестирования:
