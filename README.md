@@ -186,6 +186,11 @@ console.log(hitOrRun(8, 15))
 <blockquote>
 <details>
 <summary>Код ✨</summary> 
+<br />
+  
+**NB:** Если я правильно понял, то в `snake_case` заглавные буквы никогда не используются, однако я все равно решил добавить метод `toLowerCase` к части `words[i].slice(1)`, чтобы избежать ситуации, при которой string следующего формата `snake_case_eRRor` конвертировался бы некорректно (т.е в `snakeСaseERRor`).
+
+<br />
 
 ```js
 function solutionFn(someString) { // Шаг №1: Определяем функцию solutionFn(), которая принимает string 
