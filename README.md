@@ -10,6 +10,12 @@
 
 Реализуйте функцию, которая получает на вход объект, а возвращает объект, в котором в качестве ключей указаны типы, встречающиеся в исходном объекте, а в качестве значений - как часто они встречались.
 
+Для решения воспользовался:
+
+- [Циклом for](https://learn.javascript.ru/while-for)
+- [Условными выражениями](https://learn.javascript.ru/ifelse)
+- [Методом typeof](https://learn.javascript.ru/types-intro)
+
 <blockquote>
 <details>
 <summary>Код ✨</summary>
@@ -96,17 +102,17 @@ console.log('testSum_num:', testSum_num, 'testSum_left:', testSum_left, 'testSum
 - `push` - функция, принимающая элемент и сохраняющая новую версию массива с добавленным элементом в конце
 - `pop` - функция, сохраняющая новую версию массива без последнего элемента и возвращающая этот последний элемент
 
+**NB:** не совсем понял можно ли было использовать уже реализованные в JS методы или нет, но я все-таки решил упростить себе жизнь и воспользовался такими штуками как:
+
+- [Array.prototype.pop()](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
+- [Array.prototype.push()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
+- [Array.prototype.slice()](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
+
 <blockquote>
 <details>
 <summary>Код ✨</summary>
 <br />
   
-**NB:** не совсем понял можно ли было использовать уже реализованные в JS методы или нет, но я все-таки решил упростить себе жизнь и воспользовался такими штуками как:
-
-- [`Array.prototype.pop()`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
-- [`Array.prototype.push()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
-- [`Array.prototype.slice()`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
-
 ```js
 function getMinimalCVS(array) {
   const history = [array.slice()] // Создадим упорядоченную коллекцию данных (= история как массив)
@@ -183,6 +189,12 @@ console.log(hitOrRun(8, 15))
 
 Напишите функцию, которая принимает на вход строку в `snake_case` (все слова в нижнем регистре и разделяются нижним подчёркиванием) и превращает её в строку в `camelCase` (слова не разделяются, первое слово пишется в нижнем регистре, у каждого следующего слова первая буква в верхнем регистре, остальные - в нижнем).
 
+Как и советовали, для решения были использованы методы строк, включая:
+
+- [length](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length)
+- [split](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split)
+- [toUpperCase](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase) и [toLowerCase](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase)
+
 <blockquote>
 <details>
 <summary>Код ✨</summary> 
@@ -214,6 +226,8 @@ console.log(testFunct)
 ### Задачка №8 - Антиспам
 
 Реализуйте функцию простейшей проверки текста на спам, где `text` – текст, проверяемый на спам, `keywords` - массив ключевых слов, а результат функции – логическое значение.
+
+В дополнение к уже перечисленным методам строк, здесь также был использован метод [includes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes). 
 
 <blockquote>
 <details>
