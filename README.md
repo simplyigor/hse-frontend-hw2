@@ -164,9 +164,9 @@ function hitOrRun(a, b) {
   if (randomNumber < 2) { // Шаг №2: Последовательность простых чисел начинается с 2, поэтому будем возвращать hit в случае, если randomNumber < 2
     return "hit";
   }
-  for (let i = 2; i <= Math.sqrt(randomNumber); i++) { // Шаг №3: Для остальных случаев проводим проверку
+  for (let i = 2; i <= Math.sqrt(randomNumber); i++) { // Шаг №3: Для остальных случаев проводим эксплицитную проверку через остаток при делении
     if (randomNumber % i === 0) {
-      return "run" + '\n' + randomNumber; // Шаг №3.1: Если да, то вернем run (для прозрачности я также решил выводить randomNumber)  
+      return "run" + '\n' + randomNumber; // Шаг №3.1: Если число простое, то вернем run (для прозрачности я также решил выводить randomNumber)  
     }
   }
   return "hit" + '\n' + randomNumber; // Шаг №3.2: Если нет, то вернем hit
