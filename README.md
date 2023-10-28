@@ -170,7 +170,7 @@ function hitOrRun(a, b) {
   if (randomNumber < 2) { // Шаг №2: Последовательность простых чисел начинается с 2, поэтому будем возвращать hit в случае, если randomNumber < 2
     return "hit";
   }
-  for (let divisor = 2; i <= Math.sqrt(randomNumber); divisor++) { // Шаг №3: Для остальных случаев проводим эксплицитную проверку через остаток при делении
+  for (let divisor = 2; divisor <= Math.sqrt(randomNumber); divisor++) { // Шаг №3: Для остальных случаев проводим эксплицитную проверку через остаток при делении
     if (randomNumber % divisor === 0) {
       return "hit" + '\n' + randomNumber; // Шаг №3.1: Если число НЕ простое, то вернем hit (для прозрачности я также решил выводить randomNumber)  
     }
