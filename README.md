@@ -23,8 +23,8 @@
 ```js
 function solutionFn(object) { // Шаг 1: Определяем функцию solutionFn(), которая получает на вход объект
   const resultObj = {}; // Шаг 2: Создаем пустой объект resultObj
-  for (let k in object) { // Шаг 3: Запускаем цикл for с проверкой условия
-    const type = typeof object[k]; // Шаг 4: Говорим функции, что type это тип ключа в входном объекте. Используем оператор typeof, как и посоветовали в задании :)
+  for (let key in object) { // Шаг 3: Запускаем цикл for с проверкой условия
+    const type = typeof object[key]; // Шаг 4: Говорим функции, что type это тип ключа в входном объекте. Используем оператор typeof, как и посоветовали в задании :)
     if (resultObj[type]) { // Шаг 5: Проверяем есть ли уже такой тип ключа в объекте resultObj
       resultObj[type]++; // Шаг 5.1: Если да, то увеличим соответствующее значение на 1 
     } else {
@@ -170,8 +170,8 @@ function hitOrRun(a, b) {
   if (randomNumber < 2) { // Шаг №2: Последовательность простых чисел начинается с 2, поэтому будем возвращать hit в случае, если randomNumber < 2
     return "hit";
   }
-  for (let i = 2; i <= Math.sqrt(randomNumber); i++) { // Шаг №3: Для остальных случаев проводим эксплицитную проверку через остаток при делении
-    if (randomNumber % i === 0) {
+  for (let divisor = 2; i <= Math.sqrt(randomNumber); divisor++) { // Шаг №3: Для остальных случаев проводим эксплицитную проверку через остаток при делении
+    if (randomNumber % divisor === 0) {
       return "hit" + '\n' + randomNumber; // Шаг №3.1: Если число НЕ простое, то вернем hit (для прозрачности я также решил выводить randomNumber)  
     }
   }
@@ -207,8 +207,8 @@ console.log(hitOrRun(8, 15))
 ```js
 function solutionFn(someString) { // Шаг №1: Определяем функцию solutionFn(), которая принимает string 
   let separateWords = someString.split('_'); // Шаг №2: Разделяем полученный string по нижнему подчеркиванию (e.g. hello_world -> hello world)
-  for (let i = 1; i < separateWords.length; i++) { // Шаг №3: Запускаем цикл для всех слов, начиная со второго (i = 1, так как в JS нумерация с нуля)
-    separateWords[i] = separateWords[i][0].toUpperCase() + separateWords[i].slice(1).toLowerCase() ; // Шаг №4: Добавляем верхний регистр к первой букве слов, затем прибавляем остальные части слов.
+  for (let singleWord = 1; singleWord < separateWords.length; singleWord++) { // Шаг №3: Запускаем цикл для всех слов, начиная со второго (i = 1, так как в JS нумерация с нуля)
+    separateWords[singleWord] = separateWords[singleWord][0].toUpperCase() + separateWords[singleWord].slice(1).toLowerCase() ; // Шаг №4: Добавляем верхний регистр к первой букве слов, затем прибавляем остальные части слов.
   }
   return separateWords.join(''); // Шаг №4: Объединяем все слова в единую конструкцию 
 }
